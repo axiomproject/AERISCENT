@@ -750,7 +750,10 @@
   background: none;
   border: none;
   cursor: pointer;
-  padding: 10px;
+  padding: 8px;
+  width: 40px;
+  height: 40px;
+  position: relative;
   z-index: 1001;
 }
 
@@ -760,6 +763,7 @@
   height: 2px;
   background: #ffffff;
   position: relative;
+  margin: auto;
   transition: all 0.3s ease;
 }
 
@@ -767,6 +771,7 @@
 .hamburger::after {
   content: '';
   position: absolute;
+  left: 0;
   width: 24px;
   height: 2px;
   background: #ffffff;
@@ -774,11 +779,11 @@
 }
 
 .hamburger::before {
-  transform: translateY(-8px);
+  top: -8px;
 }
 
 .hamburger::after {
-  transform: translateY(8px);
+  top: 8px;
 }
 
 .hamburger.open {
@@ -786,46 +791,54 @@
 }
 
 .hamburger.open::before {
-  transform: rotate(45deg);
+  transform: rotate(45deg) translate(5px, 5px);
 }
 
 .hamburger.open::after {
-  transform: rotate(-45deg);
+  transform: rotate(-45deg) translate(5px, -5px);
 }
 
 @media (max-width: 768px) {
   .mobile-menu-btn {
-    display: block;
-    position: relative;
-    z-index: 1001;
+    display: flex;
   }
 
   .nav-links {
     position: fixed;
     top: 0;
-    right: -100%;
+    left: 100%;
     height: 100vh;
     width: 100%;
     background: #74845E;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 32px;
-    transition: all 0.3s ease;
-    z-index: 1000;
+    gap: 40px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 999;
+    padding-top: 60px;
   }
 
   .nav-links.open {
-    right: 0;
+    left: 0;
   }
 
   .nav-links a {
-    font-size: 18px;
+    font-size: 20px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
   }
 
-  .navbar-inner {
-    justify-content: space-between;
+  .nav-links.open a {
+    opacity: 1;
+    transform: translateY(0);
   }
+
+  .nav-links.open a:nth-child(1) { transition-delay: 0.2s; }
+  .nav-links.open a:nth-child(2) { transition-delay: 0.3s; }
+  .nav-links.open a:nth-child(3) { transition-delay: 0.4s; }
+  .nav-links.open a:nth-child(4) { transition-delay: 0.5s; }
 }
 
 @media (max-width: 768px) {
@@ -882,5 +895,35 @@
 
   .collection-desc {
     min-height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-inner {
+    justify-content: flex-start;
+    position: relative;
+  }
+
+  .mobile-menu-btn {
+    position: absolute;
+    right: 32px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .logo {
+    margin-right: 0;
+  }
+
+  .nav-links {
+    /* ...existing nav-links styles... */
+    right: 0;
+    left: auto;
+    transform: translateX(100%);
+  }
+
+  .nav-links.open {
+    transform: translateX(0);
+    right: 0;
   }
 }
