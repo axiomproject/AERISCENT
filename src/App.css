@@ -436,13 +436,13 @@
   font-weight: 300;
   color: #ffffff; /* Changed to white for contrast */
   text-align: center;
-  margin-bottom: 48px;
+  margin-bottom: 32px; /* Reduced from 48px */
   animation: slideUp 0.8s ease-out;
 }
 
 .new-arrivals-section-one {
-  min-height: 90vh; /* Reduced from 100vh */
-  padding: 80px 0; /* Reduced from 120px */
+  min-height: 80vh; /* Reduced from 90vh */
+  padding: 60px 0; /* Reduced from 80px */
   background-image: url('/Newbg1.JPG');
   background-size: cover;
   background-position: center;
@@ -463,8 +463,8 @@
 }
 
 .new-arrivals-section-two {
-  min-height: 90vh; /* Reduced from 100vh */
-  padding: 80px 0; /* Reduced from 120px */
+  min-height: 80vh; /* Reduced from 90vh */
+  padding: 60px 0; /* Reduced from 80px */
   background-image: url('/Newbg2.JPG');
   background-size: cover;
   background-position: center;
@@ -541,13 +541,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px 0; /* Reduced from 40px */
+  padding: 10px 0; /* Reduced from 20px */
   position: relative;
   z-index: 1;
 }
 
 .new-arrival-image {
-  max-width: 600px; /* Reduced from 800px */
+  max-width: 550px; /* Reduced from 600px */
   width: 100%;
   height: auto;
   border-radius: 8px;
