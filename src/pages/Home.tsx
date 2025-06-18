@@ -37,7 +37,7 @@ const Home = () => {
       <section className="hero-section">
         <div className="hero-content">
           <h1 className="hero-title">AERISCENT</h1>
-          <h2 className="hero-subtitle">BY VERDANT VEIL</h2>
+          <h2 className="hero-subtitle">NATURE IN YOUR HOME</h2>
         </div>
       </section>
       
@@ -47,15 +47,9 @@ const Home = () => {
             <img src="/Section2Image.JPG" alt="Aeriscent Product" className="feature-image" />
           </div>
           <div className="text-content" ref={sectionRef}>
-            <h2 className="section-title scroll-animate"><strong>AERISCENT</strong> is more than a linen spray</h2>
+            <h2 className="section-title scroll-animate">BRING HOME THE SERENITY OF NATURE WITH AERISCENT</h2>
             <p className="section-description scroll-animate">
-              It is made up of 100% natural Ingredients, Free from harsh chemicals, Artificial Fragrances, or synthetic additives.
-            </p>
-            <p className="section-description scroll-animate">
-              We value fragrances, natural products, and eco-friendly decor, with our target audience in middle to upper-middle class income and self-care interests.
-            </p>
-            <p className="section-description scroll-animate">
-              When it comes to scents, there are different types of sensitivities and preferences that <strong>AERISCENT</strong> can offer in one spray.
+            <b>AERISCENT</b> is more than a linen spray - It is made up of 100% natural Ingredients, Free from harsh chemicals, Artificial Fragrances, or synthetic additives.
             </p>
             <a href="/collection" className="shop-now-btn scroll-animate">SHOP NOW</a>
           </div>

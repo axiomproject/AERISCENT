@@ -247,8 +247,9 @@
 }
 
 .section-title {
+  font-family: 'Times New Roman', Times, serif;
   font-size: 36px;
-  font-weight: 300; /* Added thinner font weight */
+  font-weight: 300;
   color: #ffffff;
   margin-bottom: 24px;
   line-height: 1.2;
@@ -262,9 +263,10 @@
   margin-bottom: 16px;
 }
 
-.section-description strong {
-  color: #ffffff; /* Changed from #74845E to white */
-  font-weight: 400; /* Made the bold text less heavy */
+.section-description strong,
+.section-description b {
+  color: #ffffff;
+  font-weight: 600; /* Increased from 400 */
 }
 
 .section-description:nth-child(2) { animation-delay: 0.2s; }
