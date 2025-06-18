@@ -110,7 +110,7 @@
   font-size: 150px; /* Increased from 64px */
   font-weight: 500; /* Changed from bold since it's a custom font */
   letter-spacing: 4px; /* Reduced from 12px */
-  margin-bottom: 8px; /* Reduced from 24px to bring text closer together */
+  margin-bottom: 24px; /* Increased from 16px */
   color: #ffffff;
 }
 
@@ -118,7 +118,7 @@
   font-family: 'Times New Roman', Times, serif;
   font-size: 40px;
   font-weight: 300; /* Added font-weight for thinner text */
-  letter-spacing: 1px; /* Reduced from 2px for slightly tighter text */
+    letter-spacing: 0px; /* Removed letter spacing completely */
   color: #ffffff; /* Changed from #a5b68f */
 }
 
@@ -197,6 +197,7 @@
 
 .section-title {
   font-size: 36px;
+  font-weight: 300; /* Added thinner font weight */
   color: #ffffff;
   margin-bottom: 24px;
   line-height: 1.2;
@@ -204,13 +205,15 @@
 
 .section-description {
   font-size: 18px;
+  font-weight: 300; /* Added thinner font weight */
   color: #ffffff;
   line-height: 1.6;
   margin-bottom: 16px;
 }
 
 .section-description strong {
-  color: #74845E;
+  color: #ffffff; /* Changed from #74845E to white */
+  font-weight: 400; /* Made the bold text less heavy */
 }
 
 .shop-now-btn {
@@ -222,7 +225,7 @@
   color: #ffffff;
   text-decoration: none;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 300; /* Made button text thinner */
   letter-spacing: 1px;
   transition: all 0.3s ease;
 }
