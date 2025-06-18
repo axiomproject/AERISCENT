@@ -36,6 +36,10 @@
   background: #74845E;
   border-bottom: 1px solid #6a7956;
   animation: fadeIn 0.5s ease-out;
+  position: fixed; /* Change from static to fixed */
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Ensure navbar stays on top of everything */
 }
 
 .navbar-inner {
@@ -326,7 +330,7 @@
 
 .preorder-section {
   min-height: 100vh;
-  padding: 120px 0;
+  padding: 180px 0; /* Increased from 120px to account for navbar height */
   background-image: url('/Preorderbg.JPG');
   background-size: cover;
   background-position: center;
@@ -442,7 +446,7 @@
 
 .new-arrivals-section-one {
   min-height: 80vh; /* Reduced from 90vh */
-  padding: 60px 0; /* Reduced from 80px */
+  padding: 180px 0; /* Increased from 80px to account for navbar height */
   background-image: url('/Newbg1.JPG');
   background-size: cover;
   background-position: center;
@@ -464,7 +468,7 @@
 
 .new-arrivals-section-two {
   min-height: 80vh; /* Reduced from 90vh */
-  padding: 60px 0; /* Reduced from 80px */
+  padding: 80px 0; /* Keep original padding for second section */
   background-image: url('/Newbg2.JPG');
   background-size: cover;
   background-position: center;
@@ -573,7 +577,7 @@
 
 .collection-section {
   min-height: 100vh;
-  padding: 120px 0;
+  padding: 180px 0; /* Increased from 120px to account for navbar height */
   background-image: url('/Collectionbg.JPG');
   background-size: cover;
   background-position: center;
@@ -738,6 +742,90 @@
 .section-three {
   scroll-snap-align: start;
   scroll-snap-stop: always;
+}
+
+/* Add mobile menu styles */
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 1001;
+}
+
+.hamburger {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: #ffffff;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: '';
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  background: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.hamburger::before {
+  transform: translateY(-8px);
+}
+
+.hamburger::after {
+  transform: translateY(8px);
+}
+
+.hamburger.open {
+  background: transparent;
+}
+
+.hamburger.open::before {
+  transform: rotate(45deg);
+}
+
+.hamburger.open::after {
+  transform: rotate(-45deg);
+}
+
+@media (max-width: 768px) {
+  .mobile-menu-btn {
+    display: block;
+    position: relative;
+    z-index: 1001;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 100%;
+    background: #74845E;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    transition: all 0.3s ease;
+    z-index: 1000;
+  }
+
+  .nav-links.open {
+    right: 0;
+  }
+
+  .nav-links a {
+    font-size: 18px;
+  }
+
+  .navbar-inner {
+    justify-content: space-between;
+  }
 }
 
 @media (max-width: 768px) {
