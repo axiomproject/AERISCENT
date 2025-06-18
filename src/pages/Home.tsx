@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 
 const Home = () => {
   const sectionRef = useRef(null);
+  const portraitRef = useRef(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -15,15 +16,19 @@ const Home = () => {
       { threshold: 0.2 }
     );
 
-    const section = sectionRef.current;
-    if (section) {
-      observer.observe(section);
-    }
+    const sections = [sectionRef.current, portraitRef.current];
+    sections.forEach(section => {
+      if (section) {
+        observer.observe(section);
+      }
+    });
 
     return () => {
-      if (section) {
-        observer.unobserve(section);
-      }
+      sections.forEach(section => {
+        if (section) {
+          observer.unobserve(section);
+        }
+      });
     };
   }, []);
 
@@ -59,11 +64,11 @@ const Home = () => {
 
       <section className="section-three">
         <div className="content-wrapper">
-          <div className="portrait-container">
-            <div className="portrait-image-wrapper">
+          <div className="portrait-container" ref={portraitRef}>
+            <div className="portrait-image-wrapper scroll-animate">
               <img src="/Section3Image1.JPG" alt="Aeriscent Portrait 1" className="portrait-image" />
             </div>
-            <div className="portrait-image-wrapper">
+            <div className="portrait-image-wrapper scroll-animate">
               <img src="/Section3Image2.jpg" alt="Aeriscent Portrait 2" className="portrait-image" />
             </div>
           </div>

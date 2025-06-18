@@ -290,7 +290,7 @@
 .portrait-image-wrapper {
   max-width: 350px; /* Reduced from 400px */
   width: 100%;
-  animation: scaleIn 0.8s ease-out backwards;
+  /* Remove animation properties */
 }
 
 .portrait-image {
@@ -303,6 +303,20 @@
 
 .portrait-container > *:nth-child(1) { animation-delay: 0.2s; }
 .portrait-container > *:nth-child(2) { animation-delay: 0.4s; }
+
+.portrait-container .scroll-animate {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.portrait-container.animate-in .scroll-animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.portrait-container.animate-in .scroll-animate:nth-child(1) { transition-delay: 0.2s; }
+.portrait-container.animate-in .scroll-animate:nth-child(2) { transition-delay: 0.4s; }
 
 .preorder-section {
   min-height: 100vh;
