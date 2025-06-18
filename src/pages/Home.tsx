@@ -5,7 +5,7 @@ const Home = () => {
       <section className="hero-section">
         <div className="hero-content">
           <h1 className="hero-title">AERISCENT</h1>
-          <h2 className="hero-subtitle">VERDANT VEIL</h2>
+          <h2 className="hero-subtitle">BY VERDANT VEIL</h2>
         </div>
       </section>
       

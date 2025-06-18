@@ -110,14 +110,16 @@
   font-size: 150px; /* Increased from 64px */
   font-weight: 500; /* Changed from bold since it's a custom font */
   letter-spacing: 4px; /* Reduced from 12px */
-  margin-bottom: 24px; /* Increased from 16px */
+  margin-bottom: 8px; /* Reduced from 24px to bring text closer together */
   color: #ffffff;
 }
 
 .hero-subtitle {
-  font-size: 40px; /* Increased from 32px */
-  letter-spacing: 2px; /* Reduced from 6px */
-  color: #a5b68f;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 40px;
+  font-weight: 300; /* Added font-weight for thinner text */
+  letter-spacing: 1px; /* Reduced from 2px for slightly tighter text */
+  color: #ffffff; /* Changed from #a5b68f */
 }
 
 .section-two {
