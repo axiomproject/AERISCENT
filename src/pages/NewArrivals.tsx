@@ -1,7 +1,6 @@
-
 const NewArrivals = () => {
   return (
-    <main>
+    <main className="new-arrivals-snap-container">
       <section className="new-arrivals-section-one">
         <div className="content-wrapper">
           <h1 className="page-title">NEW ARRIVALS</h1>

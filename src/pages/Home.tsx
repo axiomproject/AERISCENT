@@ -33,7 +33,7 @@ const Home = () => {
   }, []);
 
   return (
-    <main>
+    <main className="snap-container">
       <section className="hero-section">
         <div className="hero-content">
           <h1 className="hero-title">AERISCENT</h1>
