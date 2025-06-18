@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'HelloParisSerif';
+  src: url('/font/HelloParisSerif-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 #root {
   width: 100%;
   min-height: 100vh;
@@ -99,16 +106,17 @@
 }
 
 .hero-title {
-  font-size: 64px;
-  font-weight: bold;
-  letter-spacing: 8px;
-  margin-bottom: 16px;
+  font-family: 'HelloParisSerif', serif;
+  font-size: 150px; /* Increased from 64px */
+  font-weight: 500; /* Changed from bold since it's a custom font */
+  letter-spacing: 4px; /* Reduced from 12px */
+  margin-bottom: 24px; /* Increased from 16px */
   color: #ffffff;
 }
 
 .hero-subtitle {
-  font-size: 32px;
-  letter-spacing: 4px;
+  font-size: 40px; /* Increased from 32px */
+  letter-spacing: 2px; /* Reduced from 6px */
   color: #a5b68f;
 }
 
@@ -274,5 +282,15 @@
 
   .portrait-image {
     height: 375px; /* Reduced height for mobile */
+  }
+
+  .hero-title {
+    font-size: 64px;
+    letter-spacing: 2px; /* Reduced from 8px */
+  }
+  
+  .hero-subtitle {
+    font-size: 32px;
+    letter-spacing: 1px; /* Reduced from 4px */
   }
 }
