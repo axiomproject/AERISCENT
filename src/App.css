@@ -256,6 +256,228 @@
   border-radius: 8px;
 }
 
+.preorder-section {
+  min-height: 100vh;
+  padding: 120px 0;
+  background-image: url('/Preorderbg.JPG');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.preorder-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7); /* Dark overlay for readability */
+}
+
+.preorder-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.preorder-item {
+  background: white;
+  padding: 32px;
+  border-radius: 12px;
+  text-align: left;
+  box-shadow: 0 2px 8px rgba(116, 132, 94, 0.08);
+  border: 1px solid rgba(116, 132, 94, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.preorder-item:hover {
+  transform: translateY(-4px);
+}
+
+.item-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.item-title {
+  font-size: 28px;
+  font-weight: 300;
+  color: #333;
+  margin-bottom: 16px;
+}
+
+.item-description {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 24px;
+  line-height: 1.6;
+  flex-grow: 1;
+}
+
+.item-details {
+  margin-bottom: 24px;
+}
+
+.release-date {
+  font-size: 14px;
+  color: #74845E;
+  margin-bottom: 8px;
+}
+
+.item-price {
+  font-size: 28px;
+  font-weight: 300;
+  color: #333;
+}
+
+.preorder-btn {
+  width: 100%;
+  padding: 14px 32px;
+  border: 2px solid #74845E;
+  border-radius: 50px;
+  background: transparent;
+  color: #74845E;
+  font-size: 16px;
+  font-weight: 300;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.preorder-btn:hover {
+  background: #74845E;
+  color: white;
+}
+
+.page-title {
+  position: relative;
+  z-index: 1;
+  font-size: 48px;
+  font-weight: 300;
+  color: #ffffff; /* Changed to white for contrast */
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.new-arrivals-section-one {
+  min-height: 100vh;
+  padding: 120px 0;
+  background-image: url('/Newbg1.JPG');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.new-arrivals-section-one::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.new-arrivals-section-two {
+  min-height: 100vh;
+  padding: 120px 0;
+  background-image: url('/Newbg2.JPG');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.new-arrivals-section-two::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.new-items-grid,
+.featured-items-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.new-item {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 32px;
+  border-radius: 12px;
+  text-align: left;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease;
+}
+
+.new-item:hover {
+  transform: translateY(-4px);
+}
+
+.section-subtitle {
+  position: relative;
+  z-index: 1;
+  font-size: 36px;
+  font-weight: 300;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 48px;
+  letter-spacing: 2px;
+}
+
+/* Update existing item styles for new arrivals */
+.new-item .item-title {
+  color: #ffffff;
+  font-size: 24px;
+}
+
+.new-item .item-description {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.new-item .item-price {
+  color: #ffffff;
+  font-size: 24px;
+  margin: 16px 0;
+}
+
+.centered-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+  position: relative;
+  z-index: 1;
+}
+
+.new-arrival-image {
+  max-width: 800px;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Remove or comment out the unused new arrivals styles */
+/* .new-items-grid, .featured-items-grid, .new-item {...} */
+
 @media (max-width: 768px) {
   .split-section {
     flex-direction: column;
@@ -297,5 +519,9 @@
   .hero-subtitle {
     font-size: 32px;
     letter-spacing: 1px; /* Reduced from 4px */
+  }
+
+  .new-arrival-image {
+    max-width: 90%;
   }
 }

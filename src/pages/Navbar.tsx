@@ -1,16 +1,19 @@
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
     <header className="navbar">
       <div className="navbar-inner">
         <div className="logo">
-          <img src="/Logo.png" alt="Aeriscent Logo" className="logo-image" />
+          <Link to="/">
+            <img src="/Logo.png" alt="Aeriscent Logo" className="logo-image" />
+          </Link>
         </div>
         <nav className="nav-links">
-          <a href="/">HOME</a>
-          <a href="/collection">COLLECTION</a>
-          <a href="/new-arrivals">NEW ARRIVALS</a>
-          <a href="/pre-order">PRE-ORDER</a>
+          <Link to="/">HOME</Link>
+          <Link to="/collection">COLLECTION</Link>
+          <Link to="/new-arrivals">NEW ARRIVALS</Link>
+          <Link to="/pre-order">PRE-ORDER</Link>
         </nav>
       </div>
     </header>
