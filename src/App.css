@@ -242,7 +242,6 @@
   color: #ffffff;
   margin-bottom: 24px;
   line-height: 1.2;
-  animation: slideInLeft 0.8s ease-out backwards;
 }
 
 .section-description {
@@ -251,7 +250,6 @@
   color: #ffffff;
   line-height: 1.6;
   margin-bottom: 16px;
-  animation: slideInLeft 0.8s ease-out backwards;
 }
 
 .section-description strong {
@@ -650,6 +648,30 @@
   font-size: 12px;
   letter-spacing: 1px;
   z-index: 1; /* Ensure tag stays above content */
+}
+
+.text-content .scroll-animate {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.text-content.animate-in .scroll-animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.text-content.animate-in .scroll-animate:nth-child(1) { transition-delay: 0.1s; }
+.text-content.animate-in .scroll-animate:nth-child(2) { transition-delay: 0.3s; }
+.text-content.animate-in .scroll-animate:nth-child(3) { transition-delay: 0.5s; }
+.text-content.animate-in .scroll-animate:nth-child(4) { transition-delay: 0.7s; }
+.text-content.animate-in .scroll-animate:nth-child(5) { transition-delay: 0.9s; }
+
+/* Remove or comment out the previous animation styles for these elements */
+.section-title,
+.section-description,
+.shop-now-btn {
+  animation: none;
 }
 
 @media (max-width: 768px) {
